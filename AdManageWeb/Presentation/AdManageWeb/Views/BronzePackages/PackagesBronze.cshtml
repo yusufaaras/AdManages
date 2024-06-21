@@ -1,0 +1,42 @@
+﻿@model List<AdManage.Application.ViewModels.BronzePackageViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<section class="grids-1 py-5">
+    <div class="container py-md-5">
+        <div class="title-content text-left mb-lg-5 mb-4">
+            <!--<h6 class="sub-title">Visit</h6>-->
+            <h3 class="hny-title">Platinum Paketlerimiz</h3>
+        </div>
+        <div class="row bottom-ab-grids">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-4 col-6">
+                    <div class="column">
+                        <a href="/DestinationController1/DestinationDetails/@item.Id">
+                            <img src="@item.Image" alt="" style="width:300px; height:300px" class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <h4><a href="/DestinationController1/DestinationDetails/@item.Id">@item.Description</a></h4>
+                            <p>@item.Details1</p>
+                            <div class="dst-btm">
+                                <h6 class="">Başlayan Fiyatlar... </h6>
+                                <span>@item.Price $</span>
+
+                            </div>
+                            <br />
+                            <div class="d-lg-block d-none">
+                                <a href="/Member/Sell/Index/" class="btn btn-style btn-secondary">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</section>

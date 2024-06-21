@@ -1,0 +1,232 @@
+﻿@model AdManage.Models.UserRegistorViewModel
+@{
+	Layout = null;
+}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+@* <!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Invent Signup Form Responsive Widget Template | Home :: W3layouts</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		  content="Invent Signup Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- //Meta tag Keywords -->
+	<!--/Style-CSS -->
+	<link rel="stylesheet" href="~/web/css/style.css" type="text/css" media="all" />
+	<!--//Style-CSS -->
+</head>
+
+<body>
+	<!-- /login-section -->
+	<section class="w3l-login-6">
+		<div class="login-hny">
+			<div class="form-content">
+				<div class="form-right">
+					<div class="overlay">
+						<div class="grid-info-form">
+							<h5>Traversal Rezervasyon</h5>
+							<h3>HESAP OLUŞTURUN</h3>
+							<p>
+								Birbirinden deneyimli Rehberlerimiz eşliğinde İskandinav ülkelerinin soğuğunu,Akdeniz ülkelerinin sıcaklığını,güzel ülkemizin kapadokyadan sürmeneye,ölü denizden Asos'a, Balkan tutundan Mısır çöllerine kadar heryere 1 adım uzaktayız. Seyehatimize katılmak için hemen kayıt olun...
+							</p>
+							<a href="index.html" class="read-more-1 btn">Hadi Başlayalm</a>
+						</div>
+
+					</div>
+				</div>
+				<div class="form-left">
+					<div class="middle">
+						<h4>Bize Katılın</h4>
+						<p>Hemen Ücretsiz Hesap Oluşturun...</p>
+					</div>
+					<form method="post" class="signin-form" action="/UserProcedures/Login/Register">
+						<div class="form-input">
+							<label>Adınız</label>
+							<input type="text"  name="Name" asp-for="Name" />
+							<span asp-validation-for="Name" class="text-danger"></span>
+						</div>
+						<div class="form-input">
+							<label>Soyadınız</label>
+							<input type="text"name="SurName" asp-for="SurName" />
+							<span asp-validation-for="SurName" class="text-danger"></span>
+						</div>
+						<div class="form-input">
+							<label>Kullanıcı Adınız</label>
+							<input type="text"name="UserName" asp-for="UserName" />
+							<span asp-validation-for="UserName" class="text-danger"></span>
+						</div>
+
+						<div class="form-input">
+							<label>Email</label>
+							<input type="email" name="Mail" asp-for="Mail" />
+							<span asp-validation-for="Mail" class="text-danger"></span>
+						</div>
+
+						<div class="form-input">
+							<label>Şifreniz</label>
+							<input type="password" name="Password" asp-for="Password" />
+							<span asp-validation-for="Password" class="text-danger"></span>
+						</div>
+
+						<div class="form-input">
+							<label>Şifre Tekrar</label>
+							<input type="password" name="ConifrmPassword" asp-for="ConifrmPassword" />
+							<span asp-validation-for="ConifrmPassword" class="text-danger"></span>
+						</div>
+						<div class="text-danger" asp-validation-summary="ModelOnly" >
+
+						</div>
+						<label class="container">
+                            Şartları Okudum <a href="#">Kabul Ediyorum</a>
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<button class="btn">Kayıt Ol</button>
+					</form>
+					<div class="copy-right text-center">
+						<p>
+							© @DateTime.Now.Year Tüm Hakları Saklıdır
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!-- //login-section -->
+</body>
+
+</html> *@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Colorlib Templates">
+	<meta name="author" content="Colorlib">
+	<meta name="keywords" content="Colorlib Templates">
+
+	<!-- Title Page-->
+	<title>Kayıt Ol</title>
+
+	<link href="~/colorlib-regform-5/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+	<link href="~/colorlib-regform-5/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+	<link href="~/colorlib-regform-5/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+	<link href="~/colorlib-regform-5/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+	<link href="~/colorlib-regform-5/css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+	<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+		<div class="wrapper wrapper--w790">
+			<div class="card card-5">
+				<div class="card-heading">
+					<h2 class="title">Kayıt Formu</h2>
+				</div>
+				<div class="card-body">
+					<form id="registerForm" method="post" action="/UserProcedures/Login/Register">
+						<div class="form-row m-b-55">
+							<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+							<div class="name">Ad</div>
+							<div class="value">
+								<div class="row row-space">
+									<div class="col-2">
+										<div class="input-group-desc">
+											<input class="input--style-5" type="text" name="name">
+											<label class="label--desc">Adınız</label>
+										</div>
+									</div>
+									<div class="col-2">
+										<div class="input-group-desc">
+											<input class="input--style-5" type="text" name="SurName">
+											<label class="label--desc">Soyadınız</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<label asp-for="Input.Email" class="name">Email</label>
+							<div class="value">
+								<div class="input-group">
+									<input asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder="mail@ornek.com" class="input--style-5" type="email" name="Mail">
+									<span asp-validation-for="Input.Email" class="text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<label  class="name">Kullanıcı Adınız</label>
+							<div class="value">
+								<div class="input-group">
+									<input class="input--style-5" name="UserName">
+									<span class="text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div asp-for="Input.Password" class="name">Şifre</div>
+							<div class="value">
+								<div class="input-group">
+									<input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="password" class="input--style-5" type="password" name="Password">
+									<span asp-validation-for="Input.Password" class="text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<div asp-for="Input.Password" class="name">Şifre Tekrar</div>
+							<div class="value">
+								<div class="input-group">
+									<input asp-for="Input.Password" autocomplete="new-password" aria-required="true" placeholder="password" class="input--style-5" type="password" name="ConifrmPassword">
+									<span asp-validation-for="Input.Password" class="text-danger"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-row p-t-20">
+							<label class="label label--block">
+							Şartları Okudum <a href="#">Kabul Ediyorum</a>
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<div>
+							<button id="registerSubmit" class="btn btn--radius-2 btn--red" type="submit">Kayıt Ol</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+
+@section Scripts {
+
+	<script src="~/colorlib-regform-5/vendor/jquery/jquery.min.js"></script>
+	<script src="~/colorlib-regform-5/vendor/select2/select2.min.js"></script>
+	<script src="~/colorlib-regform-5/vendor/datepicker/moment.min.js"></script>
+	<script src="~/colorlib-regform-5/vendor/datepicker/daterangepicker.js"></script>
+	<script src="~/colorlib-regform-5/js/global.js"></script>
+	<partial name="_ValidationScriptsPartial" />
+}

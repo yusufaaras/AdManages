@@ -1,0 +1,360 @@
+﻿@using AdManage.Domain.Entities
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+
+<!-- main-slider -->
+<section class="w3l-main-slider" id="home">
+    <div class="banner-content">
+        <div id="demo-1"
+             data-zs-src='["~/Traversal-Liberty/assets/images/reklam1.0.jpg", "~/Traversal-Liberty/assets/images/reklam1.1.jpg","~/Traversal-Liberty/assets/images/reklam1.2.jpg", "~/Traversal-Liberty/assets/images/reklam1.3.jpg"]'
+             data-zs-overlay="dots">
+            <div class="demo-inner-content">
+                <div class="container">
+                    <div class="banner-infhny">
+                        <h3>Biz size reklam değil müşteri vaat ediyoruz</h3>
+                        <h6 class="mb-3">David Ogilvy der ki 'Orijinal olanın reklamını yapın. 'Biz de diyoruz ki 'Bizimle çalışın orijinal olun'</h6>
+                        <div class="flex-wrap search-wthree-field mt-md-5 mt-4">
+                            <form action="#" method="post" class="booking-form">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w3l-grids-3 py-5">
+    <div class="container py-md-5">
+        <div class="title-content text-left mb-lg-5 mb-4">
+            <!--<h6 class="sub-title">Visit</h6>-->
+            <h3 class="hny-title">Hazır Reklam Şablonları</h3>
+        </div>
+        <div class="row bottom-ab-grids">
+            <!--/row-grids-->
+            <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam1.2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 1 </h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat </h6>
+                                    <span>$50</span>
+                                </div>
+                                <p class="sub-para">Akılda kalıcı ve Sıradışı</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 subject-card mt-lg-0 mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.0.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır paket 2</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat </h6>
+                                    <span>$70</span>
+                                </div>
+                                <p class="sub-para">Yaratıcı ve güçlü</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--//row-grids-->
+            <!--/row-grids-->
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 3</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat </h6>
+                                    <span>$65</span>
+                                </div>
+                                <p class="sub-para">Gerçekçi ve çekici</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 4</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> fiyat </h6>
+                                    <span>$80</span>
+                                </div>
+                                <p class="sub-para">Yaratıcı ve İlgi Çekici</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--//row-grids-->
+            <!--/row-grids-->
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 5</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat </h6>
+                                    <span>$50</span>
+                                </div>
+                                <p class="sub-para">Cazip ve Hedefe yönelik </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.4.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 6</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class="">Fiyat </h6>
+                                    <span>$60</span>
+                                </div>
+                                <p class="sub-para">Sade ve Harekete geçirici</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--//row-grids-->
+            <!--/row-grids-->
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 7</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat </h6>
+                                    <span>$70</span>
+                                </div>
+                                <p class="sub-para">Yaratıcı ve İlgi Çekici</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 subject-card mt-4">
+                <div class="subject-card-header p-4">
+                    <a href="#" class="card_title p-lg-4d-block">
+                        <div class="row align-items-center">
+                            <div class="col-sm-5 subject-img">
+                                <img src="~/Traversal-Liberty/assets/images/reklam2.6.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-sm-7 subject-content mt-sm-0 mt-4">
+                                <h4>Bakır Paket 8</h4>
+                                <!--<p>3Days, 4 Nights</p>-->
+                                <div class="dst-btm">
+                                    <h6 class=""> Fiyat</h6>
+                                    <span>$100</span>
+                                </div>
+                                <p class="sub-para">Sıradışı ve Merak uyandırıcı</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!--//row-grids-->
+        </div>
+    </div>
+</section>
+<!--//grids-->
+<!-- stats -->
+<section class="w3l-stats py-5" id="stats">
+    <div class="gallery-inner container py-lg-0 py-3">
+        <div class="row stats-con pb-lg-3">
+            <div class="col-lg-3 col-6 stats_info counter_grid">
+                <p class="counter">815</p>
+                <h4>Ana Sayfa Görüntülenmesi</h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid1">
+                <p class="counter">230</p>
+                <h4>Bakır Paket Satın Alım Sayısı</h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid mt-lg-0 mt-5">
+                <p class="counter">812</p>
+                <h4>Paket Satın Alım İsteği</h4>
+            </div>
+            <div class="col-lg-3 col-6 stats_info counter_grid2 mt-lg-0 mt-5">
+                <p class="counter">990</p>
+                <h4>Müşteri Sayımız</h4>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //stats -->
+<!--/-->
+<!-- //stats -->
+<!--/w3l-bottom-->
+<section class="w3l-bottom py-5">
+    <div class="container py-md-4 py-3 text-center">
+        <div class="row my-lg-4 mt-4">
+            <div class="col-lg-9 col-md-10 ml-auto">
+                <div class="bottom-info ml-auto">
+                    <div class="header-section text-left">
+                        <h3 class="hny-title two">Reklamcılık sektörünün babası David Ogilvy'in Reklamcılık üzerine 15 önemli sözü</h3>
+                        <p class="mt-3 pr-lg-5">
+                            -Yeni bir müşteri kazanmanın en iyi yolu, mevcut müşterileriniz için müstakbel müşterilerinizi etkileyecek reklamlar yapmaktır.
+                        </p>
+                        <p class="mt-3 pr-lg-5">
+                            -Kadınların satın aldığı ürünlerin reklamlarını erkeklerin yazmasına izin vermeyin.
+                        </p>
+                        <p class="mt-3 pr-lg-5">
+                            -Her reklam, markanın kimliğine yapılan uzun vadeli bir yatırımdır.
+                        </p>
+                        <a href="about.html" class="btn btn-style btn-secondary mt-5">Daha fazlası için tıkla</a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//w3l-bottom-->
+<!-- testimonials -->
+<section class="w3l-clients" id="clients">
+    <!-- /grids -->
+    <div class="cusrtomer-layout py-5">
+        <div class="container py-lg-4 py-md-3 pb-lg-0">
+            <div class="heading text-center mx-auto">
+                <h6 class="sub-title text-center">Müşterilerimizin Yorumları</h6>
+                <h3 class="hny-title mb-md-5 mb-4">Gelin ne dediklerine birlikte bakalım.</h3>
+            </div>
+            <!-- /grids -->
+            <div class="testimonial-width">
+                <div id="owl-demo1" class="owl-two owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <span class="fa fa-quote-left" aria-hidden="true"></span>
+                                    Siteye ilk girdiğimde çok mutlu oldum.Aradığım her şey elimin altındaydı.İstediğim şeyi bulmakta hiç zorluk çekmedim ayrıca
+                                    sitenin tasarımı çok güzel olmuş.Canlı renkler kullanılmış.Arayüz çok iyi ve kullanışlı.
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="~/Traversal-Liberty/assets/images/c1.jpg" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Ömer Hüsameddin</h3>
+                                        <p class="indentity">Example City</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <span class="fa fa-quote-left" aria-hidden="true"></span>
+                                    Gösterilen ilgi çok hoşuma gitti.Hızlı bir şekilde ihtiyacım olan reklamı bulup aldım.Gerçekten işlerini haklarıyla yapıyorlar.
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="~/Traversal-Liberty/assets/images/c2.jpg" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Aytuğ kındır</h3>
+                                        <p class="indentity">Example City</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <span class="fa fa-quote-left" aria-hidden="true"></span>
+                                    Sitede aradığınız her şey mevcut şu neden yok bu neden burada gibi sorular sormuyor insan.Diğer sitelerden en büyük farkı bu olmuş diyebilirim
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="~/Traversal-Liberty/assets/images/c3.jpg" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Ekrem imaro</h3>
+                                        <p class="indentity">Example City</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial-content">
+                            <div class="testimonial">
+                                <blockquote>
+                                    <span class="fa fa-quote-left" aria-hidden="true"></span>
+                                    İlk defa girdiğim bu sitede biraz çekincelerim vardı.Şimdi ne kadar uğraşmam gerekecek ya yanlış bir şey satın alırsam
+                                    veya aradığımı saatlerce bulamazsam gibi sorular beni rahatsız ediyordu.Siteden çıkarken ise tam tersi bir tavırrla çok mutlu
+                                    bir şekilde buradan ayrılıyorum
+                                </blockquote>
+                                <div class="testi-des">
+                                    <div class="test-img">
+                                        <img src="~/Traversal-Liberty/assets/images/c4.jpg" class="img-fluid" alt="client-img">
+                                    </div>
+                                    <div class="peopl align-self">
+                                        <h3>Murat Kuru</h3>
+                                        <p class="indentity">Example City</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- /grids -->
+    </div>
+    <!-- //grids -->
+</section>

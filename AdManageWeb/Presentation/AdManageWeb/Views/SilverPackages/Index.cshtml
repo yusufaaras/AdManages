@@ -1,0 +1,67 @@
+﻿@model List<AdManage.Domain.Entities.SilverPackages>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<!-- Eklemek için gerekli JavaScript dosyaları -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/5.0.12/signalr.min.js"></script>
+
+<!-- SignalR bağlantısı ve reklam güncelleme işlevi -->
+<script>
+    $(document).ready(function () {
+        // SignalR bağlantısı oluşturma
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/adManageHub")
+            .build();
+
+        // Reklam güncelleme işlevi
+        connection.on("ReceiveAdvertisementUpdate", function (advertisementId, newContent) {
+            // Reklamın güncellenmesi durumunda yapılacak işlemler
+            console.log("Reklam Güncellendi: ID=" + advertisementId + ", İçerik=" + newContent);
+
+            // Reklamı güncelleyen kodu buraya ekleyin, örneğin:
+            // $("#advertisement_" + advertisementId).html(newContent);
+        });
+
+        // SignalR bağlantısını başlatma
+        connection.start().catch(err => console.error(err.toString()));
+    });
+</script>
+
+<section class="grids-1 py-5">
+    <div class="container py-md-5">
+        <div class="title-content text-left mb-lg-5 mb-4">
+            <!--<h6 class="sub-title">Visit</h6>-->
+            <h3 class="hny-title">Platinum Paketlerimiz</h3>
+        </div>
+        <div class="row bottom-ab-grids">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-4 col-6">
+                    <div class="column">
+                        <a href="/DestinationController1/DestinationDetails/@item.Id">
+                            <img src="@item.Image" alt="" style="width:300px; height:300px" class="img-fluid">
+                        </a>
+                        <div class="info">
+                            <h4><a href="/DestinationController1/DestinationDetails/@item.Id">@item.Description</a></h4>
+                            <p>@item.Details1</p>
+                            <div class="dst-btm">
+                                <h6 class="">Başlayan Fiyatlar... </h6>
+                                <span>@item.Price $</span>
+
+                            </div>
+                            <br />
+                            <div class="d-lg-block d-none">
+                                <a href="/Buy/Index/" class="btn btn-style btn-secondary">Buy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</section>

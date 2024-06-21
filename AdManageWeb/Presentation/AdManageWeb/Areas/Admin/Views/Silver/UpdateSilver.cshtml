@@ -1,0 +1,48 @@
+﻿@model AdManage.Domain.Entities.SilverPackages
+@{
+    ViewData["Title"] = "UpdateSilver";
+    Layout = "~/Views/Shared/_AdminUILayout.cshtml";
+}
+
+<h1>Rota Güncelleme Sayfası</h1>
+<form method="post" action="/Admin/Silver/UpdateSilver">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Description, "Paket Adı")
+        <input type="text" name="Description" value="@Model.Description" asp-for="Description" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Price, "Fiyat")
+        <input type="text" name="Price" value="@Model.Price" asp-for="Price" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Image, "Ana Görsel")
+        <input type="text" name="Image" value="@Model.Image" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.CoverImage, "Kapak Görseli")
+        <input type="text" name="CoverImage" value="@Model.CoverImage" asp-for="CoverImage" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Görsel 2")
+        <input type="text" name="Image2" value="@Model.Image2" asp-for="Image2" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Details1, "Detay 1")
+        <textarea cols="30" rows="5" class="form-control" name="Details1" asp-for="Details1">@Model.Details1</textarea>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(x => x.Details2, "Detay 2")
+        <textarea cols="30" rows="5" class="form-control" name="Details2" asp-for="Details2">@Model.Details2</textarea>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-outline-primary">Güncelle</button>
+    <br />
+</form>
+

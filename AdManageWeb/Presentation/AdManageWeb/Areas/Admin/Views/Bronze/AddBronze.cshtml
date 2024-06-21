@@ -1,0 +1,51 @@
+﻿@model AdManage.Domain.Entities.BronzePackages
+@{
+    ViewData["Title"] = "AddBronze";
+    Layout = "~/Views/Shared/_AdminUILayout.cshtml";
+}
+
+<h1>Yeni Bronz Paket Oluşturma Sayfası</h1>
+<form method="post" action="/Admin/Bronze/AddBronze">
+    <div class="form-group">
+        @Html.Label("Paket Adı")
+        <input type="text" name="Description" asp-for="Description" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Fiyat")
+        <input type="text" name="Price" asp-for="Price" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Ana Görsel")
+        <input type="text" name="Image" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Kapak Görseli")
+        <input type="text" name="CoverImage" asp-for="CoverImage" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Görsel 2")
+        <input type="text" name="Image2" asp-for="Image2" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Detay 1")
+        <textarea cols="30" rows="5" class="form-control" name="Details1" asp-for="Details1"></textarea>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Detay 2")
+        <textarea cols="30" rows="5" class="form-control" name="Details2" asp-for="Details2"></textarea>
+    </div>
+    <button class="btn btn-outline-primary">Oluştur</button>
+    <br />
+</form>
+<script>
+    window.onload = (function () {
+        alert('Rezervasyonunuz başlangıçta onay bekliyor şeklinde alınacaktır.Rezervasyon onaylanma süreci için "Güncel Rezervasyonlarım" menusunu takip etmeyi unutmayın.');
+    });</script>
+
+

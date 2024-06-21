@@ -1,0 +1,39 @@
+﻿@using AdManage.Domain.Entities
+@model List<BronzePackages>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminUILayout.cshtml";
+    
+}
+    <table class="table table-bordered">
+        <tr>
+            <td colspan="7">
+                <!-- colspan, yatayda kaç hücreye yayılacağını belirtir -->
+                <a href="/Admin/Bronze/AddBronze" class="btn btn-outline-primary">Yeni Paket Ekle</a>
+            </td>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th>paket Adı</th>
+            <th>Fiyat</th>
+            <th>Açıklaması</th>
+            <th>Sitede Gör</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Description</td>
+                <td>@item.Price</td>
+                <td>@item.Image</td>
+                <td><a href="#" class="btn btn-outline-info">Sitede Gör</a></td>
+            <td><a href="/Admin/Bronze/DeleteBronze/@item.Id/" class="btn btn-outline-danger">Sil</a></td>
+            <td><a name="id" href="/Admin/Bronze/UpdateBronze/@item.Id/" class="btn btn-outline-success">Güncelle</a></td> 
+            </tr>
+        }
+    </table>
+
